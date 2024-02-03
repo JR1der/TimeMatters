@@ -1,0 +1,30 @@
+body {
+  background-image: url("img/PurpleJapaneesePainting.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin: 0;
+}
+
+.age {
+  padding: 10px;
+  color: #f9f4fa;
+  font-size: 52px;
+  border: 4px solid #8176b0;
+  width: 380px;
+  font-family: "Montserrat", sans-serif;
+  height: auto;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+}
+
+.age p {
+  margin: 0;
+}
