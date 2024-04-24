@@ -13,6 +13,7 @@ body {
 }
 
 .age {
+  cursor: pointer;
   padding: 10px;
   color: rgb(212, 233, 243);
   text-shadow: 0 0 8px #67b8ce;
