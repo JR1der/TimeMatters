@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,9 +8,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@200;400;600&family=Oswald:wght@200;300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <script>
+      const images = [
+        "img/jack_white_911gt3rs/jack-white-0yoXIaU3dxk-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-3ksulUvfPV0-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-3lI-9QhdKD0-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-3MEdjPF_-Ec-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-DL4ngTeThoY-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-DnoF6dc8pD4-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-jC2TBT7QqSg-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-LhI4d9IM6uI-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-Ls0ZPURpoDE-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-NMULoAz4olo-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-pkvecakeQjo-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-RtrgMUdk1M0-unsplash.jpg",
+        "img/jack_white_911gt3rs/jack-white-yBGnUEW1MbY-unsplash.jpg",
+      ];
+
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+
+      const img = new Image();
+      img.src = randomImage;
+
+      img.onload = () => {
+        document.body.style.backgroundImage = `url('${randomImage}')`;
+      };
+    </script>
   </head>
   <body>
     <div class="age" id="number-container">

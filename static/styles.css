@@ -1,5 +1,5 @@
 body {
-  background-image: url("img/PurpleJapaneesePainting.jpg");
+  transition: background-image 0.5s ease-in-out;
   background-position: center;
   background-repeat: no-repeat;
   max-width: 100%;
@@ -13,22 +13,81 @@ body {
 }
 
 .age {
-  cursor: pointer;
-  padding: 10px;
-  color: rgb(212, 233, 243);
-  text-shadow: 0 0 8px #67b8ce;
-  font-size: 52px;
-  width: 380px;
-  font-family: "Montserrat", sans-serif;
-  height: auto;
-  border-radius: 10px;
-  text-align: center;
-  display: inline-block;
-  border: 2px solid rgba(179, 67, 235, 0.1);
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: #dfadf1 0 0 15px;
+  cursor: grab;
+  padding: 16px 24px;
+  font-size: 42px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+
+  /* Better visible text */
+  color: #ffdf9a;
+  text-shadow:
+    0 0 5px rgba(255, 236, 154, 0.6),
+    0 0 10px rgba(255, 252, 154, 0.4),
+    0 0 20px rgba(255, 250, 154, 0.2);
+
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 10px rgba(255, 242, 0, 0.3),
+    0 0 40px rgba(255, 213, 0, 0.15),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 420px;
+  height: 80px;
+
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  transition: all 0.3s ease;
 }
 
 .age p {
   margin: 0;
+  width: 100%;
+  text-align: left;
+  padding-left: 16px;
+  font-family: "Orbitron", monospace;
+  font-size: 42px;
+  color: #ffe69a;
+  text-shadow: 0 0 5px rgba(255,231,154,0.6),
+               0 0 10px rgba(243,255,154,0.4),
+               0 0 20px rgba(247,255,154,0.2);
+}
+
+.age:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px rgba(255, 208, 0, 0.6),
+    0 0 60px rgba(255, 247, 0, 0.3),
+    0 0 80px rgba(255, 213, 0, 0.2);
+}
+
+.age::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.4), transparent 60%),
+              radial-gradient(circle at 70% 50%, rgba(255,255,255,0.2), transparent 60%);
+  transform: rotate(-25deg);
+  filter: blur(8px);
+  opacity: 0.8;
+  animation: scan 3s infinite linear;
+}
+
+@keyframes scan {
+  0% { left: -150%; }
+  50% { left: 50%; }
+  100% { left: 150%; }
 }
